@@ -10,7 +10,7 @@ const Dropdown = require('./components/dropdown').Dropdown
 const DropdownMenuItem = require('./components/dropdown').DropdownMenuItem
 const NetworkDropdownIcon = require('./components/network-dropdown-icon')
 const R = require('ramda')
-const { ADVANCED_ROUTE } = require('../../../helpers/constants/routes')
+const { NETWORKS_ROUTE } = require('../../../helpers/constants/routes')
 
 // classes from nodes of the toggle element.
 const notToggleElementClassnames = [
@@ -255,7 +255,7 @@ NetworkDropdown.prototype.render = function () {
       DropdownMenuItem,
       {
         closeMenu: () => this.props.hideNetworkDropdown(),
-        onClick: () => this.props.history.push(ADVANCED_ROUTE),
+        onClick: () => this.props.history.push(NETWORKS_ROUTE),
         style: dropdownMenuItemStyle,
       },
       [
